@@ -13,12 +13,12 @@ from PyQt5 import QtWidgets, QtGui
 
 class OWExecuteNotebook(OWBwBWidget):
     name = "ExecuteNotebook"
-    description = "Base installation of Jupyter"
+    description = "None"
     priority = 10
     icon = getIconName(__file__,"jupyter_image.png")
     want_main_area = False
-    docker_image_name = "biodepot/thinklab"
-    docker_image_tag = "vis_v3"
+    docker_image_name = "uwthinklab/maw_visualization"
+    docker_image_tag = "v1"
     inputs = [("InputDir",str,"handleInputsInputDir"),("Trigger",str,"handleInputsTrigger"),("startingNotebook",str,"handleInputsstartingNotebook")]
     outputs = [("OutputDir",str),("outputNotebook",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

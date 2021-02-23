@@ -13,12 +13,12 @@ from PyQt5 import QtWidgets, QtGui
 
 class OWUpdateStayDuration(OWBwBWidget):
     name = "UpdateStayDuration"
-    description = "Minimum Python3 container with pip"
+    description = "None"
     priority = 10
     icon = getIconName(__file__,"loop.svg")
     want_main_area = False
-    docker_image_name = "biodepot/thinklab"
-    docker_image_tag = "workflow_v2"
+    docker_image_name = "uwthinklab/maw_containers_1"
+    docker_image_tag = "v1"
     inputs = [("Input",str,"handleInputsInput")]
     outputs = [("Output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

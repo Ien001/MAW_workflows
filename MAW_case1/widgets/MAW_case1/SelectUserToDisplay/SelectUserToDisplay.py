@@ -13,12 +13,12 @@ from PyQt5 import QtWidgets, QtGui
 
 class OWSelectUserToDisplay(OWBwBWidget):
     name = "SelectUserToDisplay"
-    description = "Minimum Python3 container with pip"
+    description = "None"
     priority = 10
     icon = getIconName(__file__,"counting.svg")
     want_main_area = False
-    docker_image_name = "biodepot/thinklab"
-    docker_image_tag = "vis_v3"
+    docker_image_name = "uwthinklab/maw_visualization"
+    docker_image_tag = "v1"
     inputs = [("input_data_path",str,"handleInputsinput_data_path"),("output_data_path",str,"handleInputsoutput_data_path"),("user_name",str,"handleInputsuser_name")]
     outputs = [("Output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

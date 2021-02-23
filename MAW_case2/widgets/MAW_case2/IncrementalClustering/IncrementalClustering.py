@@ -17,8 +17,8 @@ class OWIncrementalClustering(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"cluster.svg")
     want_main_area = False
-    docker_image_name = "biodepot/thinklab"
-    docker_image_tag = "workflow_v2"
+    docker_image_name = "uwthinklab/maw_containers_1"
+    docker_image_tag = "v1"
     inputs = [("Input",str,"handleInputsInput")]
     outputs = [("Output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
